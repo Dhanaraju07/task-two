@@ -12,7 +12,12 @@ const SignUp = () => {
     if (name && email && password !== "") {
       alert("Successfully Signed In");
     } else {
-      alert("Please Enter your details");
+      if (!name) setNameErr("Please enter your name");
+      else setNameErr("");
+      if (!email) setEmailErr("Please enter your email");
+      else setEmailErr("");
+      if (!password) setPasswordErr("Please enter your password");
+      else setPasswordErr("");
     }
   };
 
